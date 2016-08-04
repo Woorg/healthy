@@ -1,0 +1,29 @@
+include ../logo/logo
+include ../main-nav/main-nav
+
+
+mixin header()
+	+b.header&attributes(attributes)
+		+e.top
+			+e.in
+				+e.logo
+					+logo()
+				+e.phones
+					+b.phones
+						+e('span').phone(tel='+88124456890') 8 812 445-68-90
+						+e('span').phone(tel='88008596654') 8 800 859-66-54
+				+e.basket
+					+b.basket
+						+e.icon
+						+e.title Ваша корзина
+						+e('a').amount(href='#basket') 1340, 0 рублей
+		+e.body
+			+e.in
+				+b.slogan
+					+e.title философия здоровья
+					+e('p').text Интернет-магазин здорового образа жизни
+
+		+e.bottom
+			+main-nav()
+
+

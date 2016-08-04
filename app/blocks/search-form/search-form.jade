@@ -1,0 +1,6 @@
+mixin search-form()
+	+b.search-form&attributes(attributes)
+		+e('form')(method='get' action='#')
+			+e.input-w
+				+e('input').input(type='text' value='' placeholder='Поиск по сайту')
+				+e('input').submit(type='submit' value='Поиск')

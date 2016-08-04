@@ -1,0 +1,49 @@
+include ../search-form/search-form
+
+
+mixin main-nav()
+	+b('nav').main-nav&attributes(attributes)
+		+e('ul').list
+			+e('li').item._active
+				+e('a').link(href='#link') каталог
+
+			+e('li').item
+				+e('a').link(href='#link') о нас
+			+e('li').item
+				+e('a').link(href='#link') новости
+			+e('li').item
+				+e('a').link(href='#link') статьи
+			+e('li').item
+				+e('a').link(href='#link') школа
+			+e('li').item
+				+e('a').link(href='#link') доставка
+			+e('li').item
+				+e('a').link(href='#link') сотрудничество
+			+e('li').item
+				+e('a').link(href='#link') контакты
+
+
+		+b.subnav
+			+e.in
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link')
+							+e('span').text Pro Porcia
+							+e('span').desc Микробиомное питание
+					+e('li').item
+						+e('a').link(href='#link')
+							+e('span').text Пантолен
+							+e('span').desc Алтайская био-добавка
+					+e('li').item
+						+e('a').link(href='#link')
+							+e('span').text	Latzimas
+							+e('span').desc Греческая продукция
+					+e('li').item
+						+e('a').link(href='#link')
+							+e('span').text пчеловодство
+							+e('span').desc Медовая продукция
+
+				+b('a').button._default.subnav__button(href='#button') В КАТАЛОГ
+
+				+search-form().subnav__search
+

@@ -1,6 +1,186 @@
 extends /blocks/layout-default/layout-default
 
+include ../blocks/header/header
+include ../blocks/logo/logo
+include ../blocks/main/main
+include ../blocks/banner/banner
+include ../blocks/side-news/side-news
+include ../blocks/welcome/welcome
+include ../blocks/feedback/feedback
+include ../blocks/products/products
+include ../blocks/spinner/spinner
+include ../blocks/subscribe/subscribe
+include ../blocks/articles/articles
+include ../blocks/seo-text/seo-text
+include ../blocks/footer/footer
+
+
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'healphy.ru - главная страница';
 
 block content
+	+header()
+	+main()
+		+b.page-row
+			+e.in
+				+side-news().page-main__news
+					+e.title наши новости
+
+					+e('ul').list
+						+e('li').item
+							+e('p').item-date 12.07.2016
+							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый, горный мёд в весовой фасовке!
+						+e('li').item
+							+e('p').item-date 12.07.2016
+							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый, горный мёд в весовой фасовке!
+						+e('li').item
+							+e('p').item-date 12.07.2016
+							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый, горный мёд в весовой фасовке!
+
+					+e.bottom
+						+e('a').all(href='#all') все новости
+
+				+welcome().page-main__welcome
+					+e('h1').title Добро пожаловать в интернет-магазин здоровья!
+					+e('p').text мы собрали для вас лучшие товары для здорового образа жизни, питания и красоты. В каталоге вы можете найти продукцию лучших пчеловодств и фермерств России, полезные пищевые добавки и потрясающую уходовую косметику.Для связи с администрацией магазина используйте сервис <br/><a href='#feedback'>Обратной связи</a> или звоните по телефону <span>+ 7 (812) 459-69-77</span>
+
+				+banner().page-main__banner
+
+		+b.page-row
+			+e.in
+				+products()
+					+e('h2').title ЛУЧШИЕ ТОВАРЫ НЕДЕЛИ
+
+					+e.w
+						+b.product-item
+							+e('a').title(href='#link') PRO PORCIYA, 12 порций
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-1.jpg' alt='product')
+							+e.w
+								+e.price 450 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') CLARUS, хлопья овсяные...
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-2.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') ПРОПОЛИС
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-3.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') ПАНТОЛЕН, 90 капсул
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-4.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') PRO PORCIYA, 12 порций
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-1.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') CLARUS ХЛОПЬЯ ОВСЯНЫЕ
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-2.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') ПРОПОЛИС 120 мл, Россия
+
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-3.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+						+b.product-item
+							+e('a').title(href='#link') ПАНТОЛЕН, 60 капс.
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-4.jpg' alt='product')
+							+e.w
+								+e.price 85 руб.
+								+e.spinner
+									+spinner()
+							+e('a').button._style-third(href='#link') В корзину!
+
+		+b.page-row
+			+e.in
+				+subscribe()
+
+		+b.page-row
+			+e.in
+				+articles
+					+e('h2').title наши статьи
+
+					+b.article
+						+e('a').title(href='#') Мед в сотах - польза
+						+e('p').text Мед приятен по вкусу и полезен организму. Но еще вкуснее и  полезнее является сотовый мед. О пользе меда в сотах было известно еще со времен Древнего Египта. Считалось...
+
+					+b.article
+						+e('a').title(href='#') Отруби для похудения
+						+e('p').text Отруби для похудения – довольно старый рецепт. Применяются как порошковые, так и хрустящие отруби различных сортов. Главное – избегать аптечных...
+
+					+b.article
+						+e('a').title(href='#') Мед в сотах - польза
+						+e('p').text Мед приятен по вкусу и полезен организму. Но еще вкуснее и  полезнее является сотовый мед. О пользе меда в сотах было известно еще со времен Древнего Египта. Считалось...
+
+		+b.page-row
+			+e.in
+				+feedback()
+
+		+b.page-row
+			+e.in
+				+seo-text()
+					+e('h2').title текст для продвижения сайта
+
+					+e('p').text В конце 2009 года мы задумали наш первый клуб Здорового образа жизни, снижения веса и восстановления здоровья как место, куда смогут приходить наши близкие и мы сами, чтоб говорить о здоровье, обмениваться полезной информацией и поддерживать друг друга.
+
+					+e('p').text Мы стали проводить первые мастер-классы и групповые занятия, обсуждать снижение веса, собирать по крупицам знания, изучать диеты и правильное питание. Получать великолепные результаты по коррекции фигуры.
+
+					+e('p').text В клубе получено много результатов по снижению веса, восстановлению здоровья детей и взрослых. Мы собрали уникальную базу знаний о правильном питании,  диетах и здоровом образе жизни. Сегодня мы приглашаем вас стать частью этого сообщества. Как член клуба, как гость или как наш коллега. Мы постоянно ищем таланты! У нас можно, как минимум, похудеть, и, как максимум, — восстановить обмен веществ и научиться правильно питаться.
+
+					+e('p').text Правильное питание, отличное самочувствие, великолепная фигура, здоровое тело — это то, что ждёт вас.Мы стали проводить первые мастер-классы и групповые занятия, обсуждать снижение веса, собирать по крупицам знания, изучать диеты и правильное питание. Получать <a href='#link'>великолепные результаты</a> по коррекции фигуры.
+
+					+e('p').text Мы собрали уникальную базу знаний о правильном питании, диетах и здоровом образе жизни.
+
+
+	+footer()
+

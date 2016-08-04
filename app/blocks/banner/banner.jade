@@ -1,0 +1,14 @@
+mixin banner()
+	+b.banner&attributes(attributes)
+		+e.image
+			+e('img')(src='assets/images/content/banner-img.jpg' alt='image')
+		+e.desc
+			+e.title Современное микробиомное питание <br/>"ПРОПОРЦИЯ" для разумного<br/> снижения веса
+			+e.quantity 12 порций
+			+e.price всего за
+				+e('span').price-old 450
+				+e('span').price-current 420 рублей!
+
+		+e('a').button.button_style-second(href='#order') заказать
+
+		+e.label Акция

@@ -1,0 +1,29 @@
+.search-form
+	width 170px
+	height 32px
+	&__input-w
+		position relative
+	&__input
+		border 2px solid #add633
+		border-radius 40px
+		padding 11px 35px 8px 47px
+		width 170px
+		background $color-white
+		border-radius 40px 40px
+		font-size 14px
+		font-weight 400
+		line-height 1
+		color #424646
+		+placeholder()
+			color #424646
+
+	&__submit
+		position absolute
+		top 12px
+		left 15px
+		border none
+		background transparent
+		sprite($search_icon)
+		hide-text()
+
+

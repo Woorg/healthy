@@ -1,0 +1,12 @@
+mixin subscribe()
+	+b.subscribe&attributes(attributes)
+		+e.in
+			+e.col
+				+e('h2').title подпишитесь на новости!
+				+e('p').text Узнавайте о поступлениях новых товаров,<br/> проводимых акциях, получайте скидки и бонусы!
+			+e.col
+				+e('form').form(method='get' action='#')
+					+e.input(type='email' value='' placeholder='Введите Ваш email' )
+					+e.submit(type='submit' value='ОТПРАВИТЬ')
+
+

@@ -1,0 +1,15 @@
+mixin feedback()
+	+b.feedback&attributes(attributes)
+		+e.top.feedback__in
+			+e('h2').title отзывы клиентов
+		+e.body
+			+e.in
+				+b.carousel-owl
+					+e('ul').list.owl-carousel
+						+e('li').item
+							+e('img').image(src='assets/images/content/customer-1.jpg ' alt='customer')
+						+e('li').item
+							+e('img').image(src='assets/images/content/customer-2.jpg ' alt='customer')
+						+e('li').item
+							+e('img').image(src='assets/images/content/customer-3.jpg ' alt='customer')
+

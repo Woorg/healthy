@@ -1,0 +1,59 @@
+mixin footer()
+	+b.footer&attributes(attributes)
+		+e.in
+			+e.row
+				+e.categories
+					+e('a').categories-link(href='#link') КАТАЛОГ
+					+e('ul').categories-list
+						+e('li').categories-item
+							+e('a')(href='#link') PRO PORCIA
+							+e('a')(href='#link') ПАНТОЛЕН
+							+e('a')(href='#link') CLARUS
+							+e('a')(href='#link') ГРЕЧЕСКАЯ ПРОДУКЦИЯ
+							+e('a')(href='#link') ПРОДУКЦИЯ ПЧЕЛОВОДСТВА
+
+				+e('nav').nav
+					+e('ul').list
+						+e('li').item
+							+e('a').link(href='#link') о нас
+						+e('li').item
+							+e('a').link(href='#link') новости
+						+e('li').item
+							+e('a').link(href='#link') статьи
+						+e('li').item
+							+e('a').link(href='#link') акции
+						+e('li').item
+							+e('a').link(href='#link') доставка
+						+e('li').item
+							+e('a').link(href='#link') сотрудничество
+						+e('li').item
+							+e('a').link(href='#link') контакты
+
+			+e.row
+				+b.social.footer__social
+					+e.title МЫ В СОЦИАЛЬНЫХ СЕТЯХ:
+					+e.w
+						+e('a').link._twitter(href='#social') Twitter
+						+e('a').link._gplus(href='#social') Google plus
+						+e('a').link._fb(href='#social') Facebook
+						+e('a').link._vimeo(href='#social') Vimeo
+
+					+e.site-name www.healphy.ru
+
+				+b.contacts.footer__contacts
+					+e.title КОНТАКТЫ:
+					+e.phone(tel='+88005553535') 8 800 555-35-35   (многоканальный)
+					+e.address г. Колпино, Ленина ул., д. 42
+					+e('a').email(href='mailto:info@healphy.ru') info@healphy.ru
+
+
+				+e.search
+					+search-form()
+
+				+e.created-by Сайт разработан: Веб-студия Эхо
+
+			+e.row
+					+e.copyright Все права защищены. <br/> Использование материалов разрешено только с согласия правообладателей
+					+e.years 2009 - 2016
+
+
