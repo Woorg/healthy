@@ -5,6 +5,7 @@
 	width 1024px
 
 .page
+	min-width 1024px
 	background $color-gray
 
 // .page-row
@@ -14,3 +15,41 @@
 	&__in
 		@extend .in
 		clearfix()
+
+	&_top
+		padding-bottom 55px
+
+	&_subscribe
+		margin-bottom 58px
+
+
+.row-title
+	position relative
+	margin-bottom 30px
+	color #424646
+	font-size 18px
+	font-weight 700
+	text-transform uppercase
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ""
+		sprite($title_icon)
+		z-index 2
+	&:after
+		position absolute
+		top 50%
+		left 0
+		content ""
+		margin-top -1px
+		width 100%
+		border-top 2px dotted #a8adae
+	span
+		position relative
+		display inline-block
+		vertical-align top
+		padding-right 22px
+		padding-left 33px
+		background #E9E9E9
+		z-index 1

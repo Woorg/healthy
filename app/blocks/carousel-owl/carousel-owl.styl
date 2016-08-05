@@ -41,7 +41,7 @@
 		display: block;
 		width: 100%;
 		-webkit-transform-style: preserve-3d; }
-	.owl-carousel .owl-nav.disabled,
+
 	.owl-carousel .owl-dots.disabled {
 		display: none; }
 	.owl-carousel .owl-nav .owl-prev,
@@ -178,15 +178,53 @@
 
 
 .carousel-owl
-	padding-bottom 30px
+	// padding-bottom 30px
 	display block
 	&__list
 		position relative
+		// margin-left 34px
+		// margin-right 34px
 	&__item
-		// width 25%
-		img
-			max-width 100%
-			height 300px
+		position relative
+		padding-top 16px
+		padding-left 34px
+		padding-right 34px
+		padding-bottom 14px
+		width 345px
+		text-align center
+
+	&__image
+		margin auto
+		margin-bottom 18px
+		display block
+		width 132px
+		height 132px
+	&__name
+		margin-bottom 14px
+		font-size 18px
+		font-weight 700
+		color #28acbc
+	&__text
+		font-size 12px
+		font-style italic
+		color #424646
+	.owl-item
+		&.center
+			.carousel-owl__item
+				position relative
+				&:after,
+				&:before
+					position absolute
+					top 82px
+					content ""
+					border-left 2px dotted #d7ded0
+					height 96px
+
+				&:after
+					right 0
+				&:before
+					left 0
+
 	.owl-dots
 		position absolute
 		bottom -30px
@@ -206,3 +244,34 @@
 		&:hover,
 		&.active
 			background darken(#2196f3, 20)
+	// .owl-nav
+
+	.owl-prev,
+	.owl-next
+		position absolute
+		top 37%
+		width 34px
+		height 34px
+		background-color #8e64cc
+		border-radius 50%
+		hide-text()
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			margin-top -8px
+			margin-left -5px
+
+	.owl-prev
+		left 0
+		&:after
+			margin-top -7px
+			margin-left -5px
+			sprite($arrow_left)
+	.owl-next
+		right 0
+		&:after
+			margin-top -7px
+			margin-left -3px
+			sprite($arrow_right)

@@ -1,15 +1,25 @@
 mixin feedback()
 	+b.feedback&attributes(attributes)
 		+e.top.feedback__in
-			+e('h2').title отзывы клиентов
+			+b('h2').row-title <span>отзывы клиентов</span>
 		+e.body
 			+e.in
 				+b.carousel-owl
 					+e('ul').list.owl-carousel
 						+e('li').item
-							+e('img').image(src='assets/images/content/customer-1.jpg ' alt='customer')
+							+e.image
+								+e('img')(src='assets/images/content/customer-1.jpg ' alt='customer')
+							+e.name Евгения К., 38 лет
+							+e('p').text Философия здоровья - мой любимый магазин!<br/> С удовольствием заказываю продукты для<br/> себя и детей. Бесплатная доставка радует!
 						+e('li').item
-							+e('img').image(src='assets/images/content/customer-2.jpg ' alt='customer')
+							+e.image
+								+e('img')(src='assets/images/content/customer-2.jpg ' alt='customer')
+							+e.name Александр М., 64 года
+							+e('p').text Прошёл курс Пантолена неделю назад,<br/> впечатления непередаваемые:<br/> советую всем друзьям и знакомым.<br/> Спасибо, Философия здоровья!
 						+e('li').item
-							+e('img').image(src='assets/images/content/customer-3.jpg ' alt='customer')
+							+e.image
+								+e('img')(src='assets/images/content/customer-3.jpg ' alt='customer')
+							+e.name Светлана, 21 год
+							+e('p').text Тренер порекомендовал переходить на овсянку.<br/> Долго искала подходящую марку -<br/>CLARUS сразили меня наповал :)))))<br/> Вкусно и очень недорого!
+
 

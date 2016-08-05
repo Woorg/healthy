@@ -18,13 +18,14 @@ $(() => {
 	function carouselOwl() {
 		const owlcarousel = $('.carousel-owl__list');
 		owlcarousel.owlCarousel({
-			margin: 10,
+			margin: 0,
 			autoWidth: false,
 			items: 3,
 			loop: true,
-			center: false,
+			center: true,
 			stagePadding: 0,
-			dots: true,
+			dots: false,
+			nav: true,
 			responsive: {
 				320: {
 					items: 2
@@ -33,7 +34,7 @@ $(() => {
 					items: 2
 				},
 				1000:{
-					items: 4
+					items: 3
 				}
 			}
 
@@ -54,11 +55,11 @@ $(() => {
 		});
 
 		amountSpinnerUp.click(function () {
-			$(this).spinner('stepUp');
+			$(this).siblings('.ui-spinner').children('.spinner__input').spinner('stepUp');
 		});
 
 		amountSpinnerDown.click(function () {
-			$(this).spinner('stepDown');
+			$(this).siblings('.ui-spinner').children('.spinner__input').spinner('stepDown');
 		});
 
 	}

@@ -11,30 +11,31 @@
 	&__in
 		@extend .in
 	&__logo
-		padding-top 16px
+		padding-top 12px
+		padding-left 66px
 		float left
-		width 270px
-		font-family $calibri
+		width 202px
 		font-weight 700
 		font-size 18px
 		line-height 1
 		text-transform uppercase
+		letter-spacing tracking(12)
 	&__phones
 		margin auto
 		padding-top 12px
+		padding-left 134px
 		width 506px
 		float left
 	&__basket
 		float right
 		width 216px
 	&__body
-		padding 32px 0 67px
+		padding 32px 0 66px
 
 	// &__bottom
 
 
 .phones
-	font-family $calibri
 	font-size 18px
 	font-weight 700
 	line-height 1
@@ -44,6 +45,7 @@
 	&__phone
 		border-left 2px dotted $color-white
 		padding-left 12px
+		letter-spacing tracking(12)
 		&:first-child
 			border-left none
 			padding-right 12px
@@ -69,15 +71,15 @@
 			margin-top  -11px
 			sprite($basket_icon)
 	&__title
-		margin-bottom 9px
-		color $color-white
-		font-family $calibri
+		margin-bottom 4px
+		padding-top 2px
 		font-size 14px
 		font-weight 400
+		color $color-white
 		line-height 1
 		text-transform uppercase
 	&__amount
-		padding-left 4px
+		padding-left 6px
 		color $color-white
 		text-align center
 		line-height 1
@@ -87,22 +89,23 @@
 
 .slogan
 	margin auto
-	padding 41px 30px 40px
+	padding 31px 30px 40px
 	width 610px
 	vertical-align top
 	background-color rgba($color-tiffany, .28)
-	font-family $calibri
 	color $color-white
 	text-align center
 	text-transform uppercase
+
 	border-radius 40px
 	&__title
 		position relative
-		margin-bottom 22px
-		padding-bottom 15px
+		margin-bottom 16px
+		padding-bottom 14px
 		font-size 48px
 		font-weight 700
 		line-height 60px
+		letter-spacing tracking(18)
 		&:after
 			position absolute
 			bottom 0

@@ -6,7 +6,7 @@ mixin subscribe()
 				+e('p').text Узнавайте о поступлениях новых товаров,<br/> проводимых акциях, получайте скидки и бонусы!
 			+e.col
 				+e('form').form(method='get' action='#')
-					+e.input(type='email' value='' placeholder='Введите Ваш email' )
-					+e.submit(type='submit' value='ОТПРАВИТЬ')
+					+e('input').input(type='email' value='' placeholder='Введите Ваш email' )
+					+e('input').submit.button_style-four(type='submit' value='ОТПРАВИТЬ')
 
 

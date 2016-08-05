@@ -21,21 +21,21 @@ block head
 block content
 	+header()
 	+main()
-		+b.page-row
+		+b.page-row._top
 			+e.in
 				+side-news().page-main__news
-					+e.title наши новости
+					+e('h2').title наши новости
 
 					+e('ul').list
 						+e('li').item
 							+e('p').item-date 12.07.2016
-							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый, горный мёд в весовой фасовке!
+							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый,<br/> горный мёд в весовой фасовке!
 						+e('li').item
 							+e('p').item-date 12.07.2016
-							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый, горный мёд в весовой фасовке!
+							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый,<br/> горный мёд в весовой фасовке!
 						+e('li').item
 							+e('p').item-date 12.07.2016
-							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый, горный мёд в весовой фасовке!
+							+e('a').item-title(href='#') Пополнение ассортимента цветочного мёда! Свежайший липовый, васильковый,<br/> горный мёд в весовой фасовке!
 
 					+e.bottom
 						+e('a').all(href='#all') все новости
@@ -49,7 +49,7 @@ block content
 		+b.page-row
 			+e.in
 				+products()
-					+e('h2').title ЛУЧШИЕ ТОВАРЫ НЕДЕЛИ
+					+b('h2').row-title <span>ЛУЧШИЕ ТОВАРЫ НЕДЕЛИ</span>
 
 					+e.w
 						+b.product-item
@@ -61,7 +61,7 @@ block content
 								+e.price 450 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') CLARUS, хлопья овсяные...
@@ -72,7 +72,7 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') ПРОПОЛИС
@@ -83,7 +83,7 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') ПАНТОЛЕН, 90 капсул
@@ -94,7 +94,7 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') PRO PORCIYA, 12 порций
@@ -105,7 +105,7 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') CLARUS ХЛОПЬЯ ОВСЯНЫЕ
@@ -116,7 +116,7 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') ПРОПОЛИС 120 мл, Россия
@@ -128,7 +128,7 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
 						+b.product-item
 							+e('a').title(href='#link') ПАНТОЛЕН, 60 капс.
@@ -139,37 +139,36 @@ block content
 								+e.price 85 руб.
 								+e.spinner
 									+spinner()
-							+e('a').button._style-third(href='#link') В корзину!
+							+e('a').button.button_style-third(href='#link') В корзину!
 
-		+b.page-row
-			+e.in
-				+subscribe()
+		+b.page-row._subscribe
+			+subscribe()
 
 		+b.page-row
 			+e.in
 				+articles
-					+e('h2').title наши статьи
+					+b('h2').row-title <span>наши статьи</span>
 
-					+b.article
-						+e('a').title(href='#') Мед в сотах - польза
-						+e('p').text Мед приятен по вкусу и полезен организму. Но еще вкуснее и  полезнее является сотовый мед. О пользе меда в сотах было известно еще со времен Древнего Египта. Считалось...
+					+e.w
+						+b.article
+							+e('a').title(href='#') Мед в сотах - польза
+							+e('p').text Мед приятен по вкусу и полезен организму. Но еще вкуснее и  полезнее является сотовый мед. О пользе меда в сотах было известно еще со времен Древнего Египта. Считалось...
 
-					+b.article
-						+e('a').title(href='#') Отруби для похудения
-						+e('p').text Отруби для похудения – довольно старый рецепт. Применяются как порошковые, так и хрустящие отруби различных сортов. Главное – избегать аптечных...
+						+b.article
+							+e('a').title(href='#') Отруби для похудения
+							+e('p').text Отруби для похудения – довольно старый рецепт. Применяются как порошковые, так и хрустящие отруби различных сортов. Главное – избегать аптечных...
 
-					+b.article
-						+e('a').title(href='#') Мед в сотах - польза
-						+e('p').text Мед приятен по вкусу и полезен организму. Но еще вкуснее и  полезнее является сотовый мед. О пользе меда в сотах было известно еще со времен Древнего Египта. Считалось...
+						+b.article
+							+e('a').title(href='#') Мед в сотах - польза
+							+e('p').text Мед приятен по вкусу и полезен организму. Но еще вкуснее и  полезнее является сотовый мед. О пользе меда в сотах было известно еще со времен Древнего Египта. Считалось...
 
 		+b.page-row
-			+e.in
-				+feedback()
+			+feedback()
 
 		+b.page-row
 			+e.in
 				+seo-text()
-					+e('h2').title текст для продвижения сайта
+					+b('h2').row-title <span>текст для продвижения сайта</span>
 
 					+e('p').text В конце 2009 года мы задумали наш первый клуб Здорового образа жизни, снижения веса и восстановления здоровья как место, куда смогут приходить наши близкие и мы сами, чтоб говорить о здоровье, обмениваться полезной информацией и поддерживать друг друга.
 

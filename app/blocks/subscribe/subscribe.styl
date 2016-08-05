@@ -1,2 +1,47 @@
 .subscribe
-	display block
+	// size 1920px 131px
+	background-color #28acbc
+	&__in
+		@extend .in
+		padding-top 20px
+		padding-bottom 25px
+		clearfix()
+	&__col
+		width 512px
+		float left
+		&:first-child
+			padding-left 17px
+	&__title
+		margin-bottom 8px
+		font-size 24px
+		font-weight 700
+		text-transform uppercase
+		color $color-white
+	&__text
+		font-size 18px
+		font-weight 400
+		color #424646
+
+	&__form
+		margin-top 26px
+		clearfix()
+	&__input
+		border 1px solid #b4de3e
+		margin-right 18px
+		padding-top 13px
+		padding-bottom 13px
+		float left
+		width 297px
+		height 38px
+		background-color #fff
+		font-family $calibri
+		font-size 14px
+		font-weight 400
+		line-height 1
+		color #424646
+		text-align center
+		border-radius 40px
+		+placeholder()
+			color #424646
+	// &__submit
+

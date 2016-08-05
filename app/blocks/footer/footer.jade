@@ -1,15 +1,19 @@
 mixin footer()
 	+b.footer&attributes(attributes)
 		+e.in
-			+e.row
+			+e.row._top
 				+e.categories
 					+e('a').categories-link(href='#link') КАТАЛОГ
 					+e('ul').categories-list
 						+e('li').categories-item
 							+e('a')(href='#link') PRO PORCIA
+						+e('li').categories-item
 							+e('a')(href='#link') ПАНТОЛЕН
+						+e('li').categories-item
 							+e('a')(href='#link') CLARUS
+						+e('li').categories-item
 							+e('a')(href='#link') ГРЕЧЕСКАЯ ПРОДУКЦИЯ
+						+e('li').categories-item
 							+e('a')(href='#link') ПРОДУКЦИЯ ПЧЕЛОВОДСТВА
 
 				+e('nav').nav
@@ -29,7 +33,7 @@ mixin footer()
 						+e('li').item
 							+e('a').link(href='#link') контакты
 
-			+e.row
+			+e.row._body
 				+b.social.footer__social
 					+e.title МЫ В СОЦИАЛЬНЫХ СЕТЯХ:
 					+e.w
@@ -50,9 +54,9 @@ mixin footer()
 				+e.search
 					+search-form()
 
-				+e.created-by Сайт разработан: Веб-студия Эхо
+				+e.created-by Сайт разработан: <a href='#link'>Веб-студия Эхо</a>
 
-			+e.row
+			+e.row._bottom
 					+e.copyright Все права защищены. <br/> Использование материалов разрешено только с согласия правообладателей
 					+e.years 2009 - 2016
 

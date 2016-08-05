@@ -23,21 +23,42 @@
 		&:hover
 			background darken($color-salat, 10)
 	&_style-second
-		padding 12px 36px
+		padding 10px 38px
 		background-color #8e64cc
 		color $color-white
 		font-size 18px
 		&:hover
 			background darken(#8e64cc, 10)
 
-	// &_style-third
-	// 	background $button-bg-small
-	// 	color $button-text-small
-	// 	&:hover
-	// 		background darken($button-bg-small, 20)
+	&_style-third
+		position relative
+		padding-top 14px
+		padding-right 24px
+		padding-bottom 10px
+		padding-left 58px
+		background #8e64cc
+		color $color-white
+		&:hover
+			background $color-salat
+		&:after
+			position absolute
+			top 8px
+			left 24px
+			content ""
+			sprite($basket_add_icon)
 
-	// &_style-four
-
+	&_style-four
+		padding-top 12px
+		padding-left 39px
+		padding-bottom 11px
+		padding-right 44px
+		background-color #b4de3e
+		font-family $calibri
+		font-size 14px
+		font-weight 400
+		color $color-white
+		&:hover
+			background darken($color-salat, 10)
 
 
 

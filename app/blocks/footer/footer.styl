@@ -1,2 +1,164 @@
 .footer
 	display block
+	background-color #28acbc
+	&__in
+		@extend .in
+		padding-top 20px
+		padding-left 34px
+		min-height 347px
+	&__row
+		position relative
+		clearfix()
+	&__row_body
+		padding-top 32px
+		min-height 160px
+	&__row_bottom
+		padding-top 50px
+		padding-bottom 35px
+	&__categories
+		position absolute
+		top 0
+		left 0
+	&__categories-link
+		margin-bottom 32px
+		display block
+		font-size 18px
+		font-weight 700
+		color #424646
+		text-decoration none
+		&:hover
+			text-decoration underline
+	// &__categories-list
+	&__categories-item
+		font-size 14px
+		font-weight 400
+		line-height 30px
+		color #fff
+		a
+			font-size 14px
+			color inherit
+			text-decoration underline
+		&:hover
+			a
+				text-decoration none
+	&__nav
+		border-bottom 2px dotted $color-white
+		padding-left 208px
+		padding-bottom 18px
+	&__list
+		font-size 0
+	&__item
+		margin-right 28px
+		display inline-block
+		vertical-align top
+		&:last-child
+			margin-right 0
+	&__link
+		font-size 18px
+		font-weight 700
+		line-height 1
+		color #3e4444
+		text-transform uppercase
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__social
+		margin-left 274px
+		float left
+		width 210px
+	&__contacts
+		float left
+		width 272px
+
+	&__search
+		margin-top 23px
+		margin-right 20px
+		margin-bottom 58px
+		float right
+
+	&__created-by
+		position absolute
+		bottom 0
+		right 20px
+		font-size 14px
+		font-weight 700
+		line-height 1
+		color #fff
+		a
+			color #fff
+			text-decoration underline
+			&:hover
+				text-decoration none
+	&__copyright
+		margin-left 340px
+		float left
+		font-size 12px
+		font-weight 400
+		line-height 24px
+		text-align center
+		color #fff
+	&__years
+		padding-top 14px
+		padding-right 20px
+		float right
+		font-size 14px
+		font-weight 700
+		line-height 24px
+		color #fff
+
+
+.social
+	&__title
+		margin-bottom 23px
+		font-size 14px
+		font-weight 700
+		line-height 1
+		color $color-white
+	&__w
+		margin-bottom 42px
+		font-size 0
+		clearfix()
+	&__link
+		margin-right 8px
+		display inline-block
+		vertical-align top
+		hide-text()
+		&:last-child
+			margin-right 0
+	&__link_twitter
+		sprite($twitter)
+	&__link_gplus
+		sprite($googleplus)
+	&__link_fb
+		sprite($facebook)
+	&__link_vimeo
+		sprite($vimeo)
+	&__site-name
+		padding-left 36px
+		font-size 14px
+		font-weight 700
+		line-height 1
+		color #fff
+.contacts
+	padding 0 25px 0 0
+	font-size 14px
+	font-weight 700
+	line-height 24px
+	color #fff
+	text-align center
+	&__title
+		margin-bottom 18px
+		line-height 1
+	// 	font-size 14px
+	// &__phone
+	// 	font-size 14px
+	// 	font-weight 700
+	// 	line-height 24px
+	// &__address
+
+	&__email
+		color $color-white
+		text-decoration none
+		&:hover
+			text-decoration underline
+
