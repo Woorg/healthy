@@ -1,0 +1,57 @@
+.pagination
+	margin-bottom 87px
+	display block
+	text-align center
+	&__info
+		margin-bottom 16px
+		font-size 14px
+		color #424646
+	&__list
+		font-size 0
+	&__item
+		margin-left 5px
+		display inline-block
+		vertical-align top
+		&:first-child
+			margin-left 0
+		&:hover
+			.pagination__link
+				background-color #8e64cc
+	&__link
+		display block
+		width 33px
+		height 33px
+		background-color #b4de3e
+		font-size 18px
+		font-weight 700
+		color $color-white
+		line-height 33px
+		text-decoration none
+		border-radius 50%
+	&__item_active
+		.pagination__link
+			background-color #8e64cc
+	&__item_back,
+	&__item_next
+		.pagination__link
+			background-color #28acbc
+			background-image linear-gradient(to top, #b3bead 0%, #fcfff4 100%)
+			color #424646
+			font-family Calibri
+			font-size 24px
+			font-weight 400
+			line-height 30px
+	&__item_back
+		margin-right 14px
+		.pagination__link
+			padding-right 4px
+	&__item_next
+		margin-left 14px
+		.pagination__link
+			padding-left 4px
+	&__dots
+		padding-left 9px
+		padding-right 9px
+		line-height 33px
+		font-size 14px
+		color #11155e

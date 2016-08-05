@@ -1,0 +1,55 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/header/header
+include ../blocks/logo/logo
+include ../blocks/main/main
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/news/news
+
+include ../blocks/pagination/pagination
+include ../blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'healphy.ru - новости философии здоровья';
+
+block content
+	+header()
+	+main()._inner
+		+b.page-row
+			+e.in
+				+breadcrumbs()
+					+e('ul').list
+						+e('li').item
+							+e('a').link(href='#link') Главная
+							| -
+						+e('li').item
+							+e('strong').link(href='#link') Новости
+		+b.page-row
+			+e.in
+				+news()
+
+				+pagination
+					+e('p').info Страница 2 из 10
+					+e('ul').list
+						+e('li').item._back
+							+e('a').link(href='#link') &lt;
+						+e('li').item
+							+e('a').link(href='#link') 1
+						+e('li').item._active
+							+e('a').link(href='#link') 2
+						+e('li').item
+							+e('a').link(href='#link') 3
+						+e('li').item
+							+e('span').dots ...
+						+e('li').item
+							+e('a').link(href='#link') 9
+						+e('li').item
+							+e('a').link(href='#link') 10
+						+e('li').item._next
+							+e('a').link(href='#link') &gt;
+
+
+
+	+footer()
+

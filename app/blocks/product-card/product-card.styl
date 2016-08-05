@@ -1,0 +1,87 @@
+.product-card
+	display block
+	&__top
+		position relative
+		padding-top 24px
+		padding-left 377px
+		min-height 502px
+		clearfix()
+
+	&__image
+		position absolute
+		top 24px
+		left 0
+		img
+			display block
+			max-width 100%
+			height auto
+	&__text
+		margin-bottom 30px
+
+	&__details
+		margin-bottom 20px
+		font-size 0
+		text-transform uppercase
+	&__item
+		margin-right 30px
+		display inline-block
+		vertical-align top
+		font-size 14px
+		&:last-child
+			margin-right 0
+		span
+			padding-right 15px
+			font-weight 700
+	&__price
+		border-bottom 2px dotted #a8adae
+		margin-bottom 32px
+		padding-bottom 24px
+		font-size 24px
+		font-weight 700
+		// text-transform uppercase
+		span
+			padding-right 20px
+			font-size 14px
+			text-transform uppercase
+	&__quant
+		margin-bottom 32px
+		text-transform uppercase
+	&__quant-title
+			padding-right 12px
+			font-weight 700
+			line-height 21px
+	.spinner
+		width auto
+		white-space nowrap
+	.spinner__button
+		text-align center
+	.spinner__input
+		background transparent
+
+	&__amount
+		margin-bottom 34px
+		font-size 24px
+		font-weight 700
+		span
+			padding-right 16px
+			font-size 14px
+			text-transform uppercase
+
+
+	// &__button
+
+
+	&__desc
+		clearfix()
+		.row-title
+			margin-bottom 14px
+			margin-left 0
+			font-size 18px
+
+		p
+			margin-left 33px
+
+		@extend .wysiwyg
+
+
+
