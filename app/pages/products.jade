@@ -1,0 +1,108 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/header/header
+include ../blocks/logo/logo
+include ../blocks/main/main
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/catalog/catalog
+include ../blocks/spinner/spinner
+include ../blocks/subscribe/subscribe
+include ../blocks/seo-text/seo-text
+include ../blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'healphy.ru - каталог';
+
+block content
+	+header()
+	+main()._inner
+		+b.page-row
+			+e.in
+				+breadcrumbs()
+					+e('ul').list
+						+e('li').item
+							+e('a').link(href='#link') Главная
+							| -
+						+e('li').item
+							+e('strong').link(href='#link') Каталог
+		+b.page-row
+			+e.in
+				+catalog()
+					+b('h2').row-title._style-second <span>каталог продукции</span>
+
+					+e('p').description Мы собрали для вас лучшие товары для здорового образа жизни, питания и красоты. В каталоге вы можете найти продукцию лучших пчеловодств и<br/> фермерств России, полезные пищевые добавки и потрясающую уходовую косметику.Для связи с администрацией магазина используйте сервис<br/> <a class='catalog__desc-link' href='#feedback'>Обратной связи</a> или звоните по телефону <a class='catalog__desc-phone' href='tel=+88124596977'>+ 7 (812) 459-69-77</a>
+
+					+e.w
+						+b.catalog-item
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-5.jpg' alt='product')
+							+e('a').title(href='#link') <span>PRO PORCIA</span>
+
+							+e('p').text Современное микробиомное питание<br/> для разумного снижения веса
+
+						+b.catalog-item
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-6.jpg' alt='product')
+							+e('a').title(href='#link') <span>CLARUS</span>
+
+							+e('p').text Премиальные продукты из экологически<br/> чистого Овса и других злаков, <br/> выращенных на Алтае
+
+						+b.catalog-item
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-7.jpg' alt='product')
+							+e('a').title(href='#link') <span>ПРОДУКЦИЯ ПЧЕЛОВОДСТВА</span>
+
+							+e('p').text Свежайший мёд, прополис и<br/> косметическая линия,<br/> нужно придумать текст.
+
+						+b.catalog-item
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-8.jpg' alt='product')
+							+e('a').title(href='#link') <span>ПАНТОЛЕН</span>
+
+							+e('p').text Уникальная биологическая добавка<br/> из пантов алтайского марала
+
+						+b.catalog-item
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-9.jpg' alt='product')
+							+e('a').title(href='#link') <span>ГРЕЧЕСКАЯ ПРОДУКЦИЯ</span>
+
+							+e('p').text Современное микробиомное питание<br/> для разумного снижения веса
+
+						+b.catalog-item
+							+e.image
+								+e('a')(href='#link')
+									+e('img')(src='assets/images/content/product-10.jpg' alt='product')
+							+e('a').title(href='#link') <span>НАБОРЫ</span>
+
+							+e('p').text Комплекс товаров, собранных вручную <br/> специалистами магазина<br/> Философия Здоровья
+
+
+
+
+		+b.page-row._subscribe._subscribe-inner
+			+subscribe()
+
+		+b.page-row
+			+e.in
+				+seo-text()
+					+b('h2').row-title <span>текст для продвижения сайта</span>
+
+					+e('p').text В конце 2009 года мы задумали наш первый клуб Здорового образа жизни, снижения веса и восстановления здоровья как место, куда смогут приходить наши близкие и мы сами, чтоб говорить о здоровье, обмениваться полезной информацией и поддерживать друг друга.
+
+					+e('p').text Мы стали проводить первые мастер-классы и групповые занятия, обсуждать снижение веса, собирать по крупицам знания, изучать диеты и правильное питание. Получать великолепные результаты по коррекции фигуры.
+
+					+e('p').text В клубе получено много результатов по снижению веса, восстановлению здоровья детей и взрослых. Мы собрали уникальную базу знаний о правильном питании,  диетах и здоровом образе жизни. Сегодня мы приглашаем вас стать частью этого сообщества. Как член клуба, как гость или как наш коллега. Мы постоянно ищем таланты! У нас можно, как минимум, похудеть, и, как максимум, — восстановить обмен веществ и научиться правильно питаться.
+
+					+e('p').text Правильное питание, отличное самочувствие, великолепная фигура, здоровое тело — это то, что ждёт вас.Мы стали проводить первые мастер-классы и групповые занятия, обсуждать снижение веса, собирать по крупицам знания, изучать диеты и правильное питание. Получать <a href='#link'>великолепные результаты</a> по коррекции фигуры.
+
+					+e('p').text Мы собрали уникальную базу знаний о правильном питании, диетах и здоровом образе жизни.
+
+
+	+footer()
+
